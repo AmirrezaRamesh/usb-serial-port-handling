@@ -2,7 +2,7 @@
 
 a brief explnation of USB port handling for serial communication while using microcontrollers. 
 
-- [read about the repo](#usb-devices-identification)
+- [read about the usb port's serial communication](#usb-devices-identification)
 - [move directly to scripts](#ready-to-use-scripts)
 
 ![picture](image.png)
