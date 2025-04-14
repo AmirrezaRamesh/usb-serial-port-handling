@@ -41,7 +41,7 @@ steps to define a `udev rule`:
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2f2f", ATTRS{idProduct}=="2424", SYMLINK+="ttyMicro"
 
 ```
-remember you can use any name you want for `SYMLINK`. its suggested to start the name with tty
+remember you can use any name you want for `SYMLINK`. its suggested to start the name with tty \
 6. save the file and use these commands: 
 ```bash
 sudo udevadm control --reload-rules
