@@ -36,12 +36,11 @@ steps to define a `udev rule`:
 ```
 3. copy the values of the first two(if two indentical devices are connected, you will need the serial ID aswell)
 4. enter ```sudo vim /dev/udev/rules.d/99-micro.rules``` and replace `micro` with any name you want. you can use `nano` instead of `vim`
-5. paste the following content with respect to vendor ID and product ID : 
+5. paste the following content with respect to vendor ID and product ID. remember you can use any name you want for `SYMLINK`. its suggested to start the name with tty:
+ 
 ```bash
 SUBSYSTEM=="tty", ATTRS{idVendor}=="2f2f", ATTRS{idProduct}=="2424", SYMLINK+="ttyMicro"
-
 ```
-remember you can use any name you want for `SYMLINK`. its suggested to start the name with tty \
 6. save the file and use these commands: 
 ```bash
 sudo udevadm control --reload-rules
