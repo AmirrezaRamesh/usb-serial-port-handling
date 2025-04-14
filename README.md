@@ -1,6 +1,6 @@
 # usb serial port handling
 
-a brief explanation of USB port handling for serial communication while using amicrocontrollers. 
+a brief explanation of USB port handling for serial communication while using microcontrollers. 
 
 - [read about the usb port's serial communication](#usb-devices-identification)
 - [move directly to scripts](#ready-to-use-script)
@@ -148,3 +148,9 @@ fi
 # fi
 
 ```
+
+TODO: 
+- an automated script for multiple devices
+- adding options like removing and adding rules
+- checking if the device is responsive
+- maybe cross-platforming? 
