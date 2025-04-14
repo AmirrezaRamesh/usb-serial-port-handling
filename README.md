@@ -48,7 +48,8 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="2f2f", ATTRS{idProduct}=="2424", SYMLINK+="t
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
-7. use ``` ls -l /dev/ttyMicro ``` to check if the port is made. it must show what device it has been linked to. find the something like `/dev/ttyMicro -> ttyACM0` 
+7. use ``` ls -l /dev/ttyMicro ``` to check if the port is made. it must show what device it has been linked to.
+> in the output, you should see something like : /dev/ttyMicro -> ttyACM0
 
 8. you've successfully made a symlink to a USB port!  
 
