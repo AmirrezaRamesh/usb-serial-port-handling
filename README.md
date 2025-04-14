@@ -1,6 +1,6 @@
 # usb serial port handling
 
-a brief explnation of USB port handling for serial communication while using microcontrollers. 
+a brief explanation of USB port handling for serial communication while using amicrocontrollers. 
 
 - [read about the usb port's serial communication](#usb-devices-identification)
 - [move directly to scripts](#ready-to-use-script)
