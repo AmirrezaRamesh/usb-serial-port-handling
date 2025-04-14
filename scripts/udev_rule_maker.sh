@@ -5,9 +5,12 @@
 # <arg1> is the port we want to make a link to (e.g ttyACM0)
 # <arg2> is the virtual port that is linked to an actual link(e.g. ttyMyMicro)
 
+# AI assistance was used to write a few of below lines
+
 PORT_NAME=$1``
 SYMLINK_NAME=$2
 
+# receving the arguments
 if [[ -z "$PORT_NAME" || -z "$SYMLINK_NAME" ]]; then
     echo "Usage: $0 <device_port> <custom_name>"
     echo "example: $0 ttyACM0 myArduino"
@@ -16,19 +19,21 @@ fi
 
 DEVICE_PATH="/dev/$PORT_NAME"
 
+#check for device
 if [ ! -e "$DEVICE_PATH" ]; then
     echo "Device $DEVICE_PATH not found"
     exit 1
 fi
 
-echo "Setting permissions on $DEVICE_PATH..."
+#not necessary but I put it anyways
+#echo "Setting permissions on $DEVICE_PATH..."
 sudo chmod 666 "$DEVICE_PATH"
-echo "Done."
+#echo "Done."
 
 echo "getting device info for $DEVICE_PATH..."
 
-# extract vendor id, product id 
-# serial is used when two identical devices are connected. if so, uncomment line 41
+# extract vendor id, product id, serial ID
+# serial is used when two identical devices are connected. if so, uncomment line 50 and modify line 57
 udev_info=$(udevadm info --query=all --name="$DEVICE_PATH")
 VENDOR_ID=$(echo "$udev_info" | grep -m1 "ID_VENDOR_ID" | cut -d= -f2)
 MODEL_ID=$(echo "$udev_info" | grep -m1 "ID_MODEL_ID" | cut -d= -f2)
