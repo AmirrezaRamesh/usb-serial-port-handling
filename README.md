@@ -58,7 +58,7 @@ on Ubuntu:
 
 1. ``` git clone https://github.com/AmirrezaRamesh/usb-serial-port-handling ```
 2. ``` cd ./scripts ```
-3. ```./udev_rule_maker <port_name> <port_symlink_name>``` \
+3. ```./udev_rule_maker <port_name> <port_symlink_name>``` 
 > **note:** `<port_name>` is the actual USB port(e.g. ttyACM0) and `<port_symlink_name>` is the link to the port with any desired name(e.g. ttyMyMicro)
 
 the script is shown below. you can take a look at it before running : 
@@ -112,7 +112,7 @@ fi
 
 echo "vendor: $VENDOR_ID"
 echo "product: $MODEL_ID"
-# I commented the line since there were sometimes I couldn't read serial number for some reason
+# I commented the line since there were sometimes errors while reading this serial number for some unknown reasons
 # echo "serial: $SERIAL" 
 
 # write rule file
