@@ -46,7 +46,7 @@ fi
 
 echo "vendor: $VENDOR_ID"
 echo "product: $MODEL_ID"
-# I commented the line since there were sometimes I couldn't read serial number for some reason
+# I commented the line since there were sometimes errors while reading the serial number for some unknown reason
 # echo "serial: $SERIAL" 
 
 # write rule file
@@ -73,7 +73,7 @@ else
     echo "symlink not created. check the rule or device info again"
 fi
 
-# optional basic check - just to make sure device is alive
+# optional basic check - just to make sure device is alive : TODO
 # echo "checking access to /dev/tty$SYMLINK_NAME..."
 # if stat "/dev/tty$SYMLINK_NAME" > /dev/null 2>&1; then
 #     echo "device is accessible"
