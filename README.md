@@ -8,8 +8,8 @@ a brief explanation of USB port handling for serial communication while using mi
 ![picture](image.png)
 
 ### USB devices identification 
-when you connect a USB device to your PC, the OS creates a `virtual serial port` as an Interface for this connection which we usually use to communicate with `microcontrollers`(e.g. arudino compatible MCUs).
-on Ubuntu, you can see this ports using the command ``` ls /dev/tty* ``` and the output will look something like `ttyACM0` or `ttyUSB0`. 
+when we connect a USB device to our PC, the OS creates a `virtual serial port` as an Interface for this connection; which we use to communicate with `microcontrollers`(e.g. arudino compatible MCUs).
+on Ubuntu, you can see this ports using the command ``` ls /dev/tty* ``` and the output we're looking for, is something like `ttyACM0` or `ttyUSB0`. 
 
 ### ttyACM and ttyUSB
 While there aren’t any practical differences between these two ports in most use cases, they may indicate different types of embedded connections. When a USB device connects to a debian based linux, it appears as either /dev/ttyUSB or /dev/ttyACM, depending on how it communicates. Devices using a `USB-to-serial converter (like FTDI or CH340)` show up as `/dev/ttyUSB` because they convert UART to USB. On the other hand, `microcontrollers` that support USB directly, often pretend to be using the CDC-ACM protocol(which is a cross-platform standarad communication class used eariler; mainly for modems), so they appear as `/dev/ttyACM` .
