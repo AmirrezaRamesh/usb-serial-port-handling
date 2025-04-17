@@ -8,7 +8,7 @@ a brief explanation of USB port handling for serial communication while using mi
 ![picture](image.png)
 
 ### USB devices identification 
-when we connect a USB device to your PC, the OS creates a `virtual serial port` as an Interface for this connection which we usually use to communicate with `microcontrollers`(e.g. arudino compatible MCUs).
+when you connect a USB device to your PC, the OS creates a `virtual serial port` as an Interface for this connection which we usually use to communicate with `microcontrollers`(e.g. arudino compatible MCUs).
 on Ubuntu, you can see this ports using the command ``` ls /dev/tty* ``` and the output will look something like `ttyACM0` or `ttyUSB0`. 
 
 ### ttyACM and ttyUSB
