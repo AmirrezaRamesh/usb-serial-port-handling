@@ -150,7 +150,7 @@ fi
 ```
 
 TODO: 
-- an automated script for multiple devices
+- an automated script for multiple operating systems
 - adding options like removing and adding rules
 - checking if the device is responsive
 - maybe cross-platforming? 
